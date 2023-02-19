@@ -1,12 +1,20 @@
 import {useState} from 'react';
 import {Bars3BottomLeftIcon , XMarkIcon  } from "@heroicons/react/24/solid";
 import Logo from "@/assets/Logo.png";
+import Link from './link';
+import { SelectedPage } from '@/shared/types';
+import useMediaQuery from '@/hooks/useMediaQuery';
 
 
-type Props = {}
+type Props = {
+    selectedPage : SelectedPage;
+    setSelectedPage : (page : SelectedPage) => void;
+}
 
-const Navbar = (props: Props) => {
+const Navbar = ({selectedPage, setSelectedPage}: Props) => {
     const flexBetween = "flex items-center justify-between";
+    const isAboveMediumScreens = useMediaQuery("(min-width: 1060px")
+
   return (
     <nav>
         <div
@@ -17,13 +25,33 @@ const Navbar = (props: Props) => {
                     {/* Left Side of the navbar */}
                     <img alt="logo" src={Logo} />
                 </div>
-                    {/* Right Side of the navbar */}
+
+                {/* Right Side of the navbar */}
+                {isAboveMediumScreens ? (
+                
                     <div className={`${flexBetween} w-full `}>
                         <div className={`${flexBetween} gap-8 text-sm`}>
-                            <p>Home</p>
-                            <p>Benifits</p>
-                            <p> Our Classes</p>
-                            <p> Contact us</p>
+                            <Link 
+                                page="Home"
+                                selectedPage={selectedPage}
+                                setSelectedPage={setSelectedPage}
+                            />
+                            <Link 
+                                page='Benifits'
+                                selectedPage={selectedPage}
+                                setSelectedPage={setSelectedPage}
+                            />
+                            <Link 
+                                page='Our Classes'
+                                selectedPage={selectedPage}
+                                setSelectedPage ={setSelectedPage}
+                            />
+                            <Link 
+                                page='Contact us'
+                                selectedPage={selectedPage}
+                                setSelectedPage={setSelectedPage}
+                            />
+                            
 
                         </div>
 
@@ -32,6 +60,13 @@ const Navbar = (props: Props) => {
                             <button>Become a Member</button>
                         </div>
                     </div>
+                    ) : (
+                    <div className="flex items-center justify-center">
+                        Hello
+                        </div>
+
+                    )
+                    }
 
             </div>
         </div>
