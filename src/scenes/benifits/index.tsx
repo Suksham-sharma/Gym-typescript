@@ -19,7 +19,6 @@ const Benifits = ({setSelectedPage}: Props) => {
             <div>
                 <HText>MORE THAN JUST GYM</HText>
             </div>
-
         </motion.div>
 
     </section>
