@@ -45,11 +45,11 @@ const Home = ({setSelectedPage}: Props) => {
                             <img src={HomePageText} alt="Home Page Text" />
                         </div>
                     </div>
-                    <p className='my-8 text-sm'>
+                    <div className='my-8 text-sm'>
                         <p className='text-lg'>Unrivaled Gym . Unrivaled Community . Unrivaled Results</p>
                         
                         Join Now to get the Body you Dream of ....
-                    </p>
+                    </div>
                 </motion.div>
 
                 {/* Action Buttons */}

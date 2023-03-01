@@ -13,11 +13,12 @@ module.exports = {
         "primary-500": "#FF6B66",
         "secondary-400": "#FFCD58",
         "secondary-500": "#FFC132",
+        "extra-100": "#ffe9e0",
       },
       backgroundImage: (theme) => ({
         "gradient-yellowred":
           "linear-gradient(90deg, #FF616A 0%, #FFC837 100%)",
-        "mobile-home": "url('./assets/images/mobile-home.jpg')",
+        "mobile-home": "url('./assets/mobile-home.jpg')",
       }),
       fontFamily: {
         dmsans: ["DM Sans", "sans-serif"],
@@ -25,9 +26,9 @@ module.exports = {
       },
       content: {
         evolvetext: "url('./assets/Evolvetext.png')",
-        abstractwaves: "url('./assets/images/abstractwaves.png')",
-        sparkles: "url('./assets/images/sparkles.png')",
-        circles: "url('./assets/images/circles.png')",
+        abstractwaves: "url('./assets/abstractwaves.png')",
+        sparkles: "url('./assets/sparkles.png')",
+        circles: "url('./assets/circles.png')",
       },
     },
     screens: {
