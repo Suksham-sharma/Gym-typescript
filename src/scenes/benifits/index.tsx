@@ -84,7 +84,7 @@ const Benifits = ({setSelectedPage}: Props) => {
             </motion.div>
 
             {/* GRAPHICS AND DESCRIPTION SECTION */}
-            <div>
+            <div className='mt-16 items-center justify-between gap-20 md:mt-28 md:flex'>
                 {/* GRAPHICS SECTION */}
                 <img className='mx-auto'
                 alt='benifits page graphics'
@@ -93,7 +93,17 @@ const Benifits = ({setSelectedPage}: Props) => {
                 {/* DESCRIPTION SECTION */}
                 <div>
                     {/* TITLE */}
-                    <div className='relative'>
+                    <motion.div
+                    className='relative'
+                    initial='hidden'
+                    whileInView= "visible"
+                    viewport={{amount:0.5}}
+                    transition={{duration: 1}}
+                    variants={{
+                        hidden: { opacity: 0 , x:60 },
+                        visible: { opacity: 1, x:0  },
+                    }}
+                    >
                         <div className='before:absolute before:-top-20 before:-left-20 before:z-[-1] md:before:content-abstractwaves'>
                             <div>
                                 <HText>MILLIONS OF HAPPY MEMBERS GETTING {" "}
@@ -101,7 +111,7 @@ const Benifits = ({setSelectedPage}: Props) => {
                                 </HText>
                             </div>
                         </div>
-                    </div>
+                    </motion.div>
 
                     {/* DESC */}
                     <div>

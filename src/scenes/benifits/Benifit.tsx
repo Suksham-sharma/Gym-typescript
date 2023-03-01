@@ -19,11 +19,11 @@ const Benifit = ({icon , title , description, setSelectedPage}: Props) => {
   return (
     <motion.div
      variants={childVariant}
-     className='my-12 mx-2 rounded-md border-2 border-gray-100 px-5 py-16 text-center md:w-2/5 flex flex-col justify-between md:h-[400px] hover:bg-extra-100 '>
+     className='my-12 mx-2 rounded-md border-2 border-gray-500 px-5 py-16 text-center md:w-2/5 flex flex-col justify-between md:h-[400px] hover:bg-extra-100 '>
 
         {/*Icon*/}
         <div className='mb-4 flex justify-center'>
-            <div className='rounded-full border-2 border-gray-100 bg-primary-100 p-4 z-10'>
+            <div className='rounded-full border-2 border-gray-500 bg-primary-100 p-4 z-10'>
                 {icon}         
             </div>
         </div>
